@@ -1,7 +1,7 @@
 '''
 I live in out of my city nowadays, so I decided to write this code. 
 It calculates daily average and total money that I spent. 
-You will add the expense for each new day.
+It will be added the expense for each new day.
 '''
 dailySpending = [4.59, 13.24, 0, 0, 2.5, 24.74, 1.3,
                  31.5, 1.8, 24.74, 10.5, 1, 8.64, 1, 3.8]
