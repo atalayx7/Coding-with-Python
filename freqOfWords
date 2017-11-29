@@ -1,0 +1,13 @@
+'''
+-Write a python function that takes a string.(Do not use any functions except split)
+-Find frequencies of each word and create dictionary with form like
+{word_1:frequency_1, word_2:frequency_2}.
+'''
+def frequencyofWords(strVal):
+    freqDict={}
+    for i in strVal.split():
+        if not i in freqDict:
+            freqDict[i]=1
+        else:
+            freqDict[i]+=1
+    return freqDict
