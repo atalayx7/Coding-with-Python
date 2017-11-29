@@ -1,0 +1,13 @@
+'''
+-Write a python function that takes a number.
+-Create a empty dictionary and fill someway where the keys are numbers between 1 and
+number(that number you take in function) (both included) and the values are square of keys.
+-Return new dictionary.
+'''
+def squaresoftheNumbers(i):
+    newDict={}
+    for j in range(1,i+1):
+        newDict[j]=j**2
+    return newDict
+
+
