@@ -1,0 +1,19 @@
+'''
+-Write a python function that takes one dictionary. Iterate over values and remove the
+smallest value from dictionary.(Do not use sort function, use pop() to remove an item)
+-Return new dictionary.
+'''
+def removeMinVal(dict):
+
+    newDict={}
+    newDict=dict
+    min=10000
+    for i in newDict:
+        if newDict[i]<min:
+            min=newDict[i]
+
+    for i in list(newDict.keys()):
+        if newDict[i]==min:
+            newDict.pop(i)
+    return newDict
+d={"The Simpsons":1989,"Futurama":1999,"Rick and Morty":2013}
