@@ -1,0 +1,18 @@
+'''
+-Create a function that takes a encrypted string.
+-Decode it via dictionary below.
+- answers={"A":"E","B":"X","F":"D","K":"L","S":"M"}
+-if a char is not in the dictionary decode as “ ? ”
+'''
+def decodeString(encryptedStr):
+    answers={"A":"E","B":"X","F":"D","K":"L","S":"M"}
+    newStr=""
+    keyList=[]
+    for i in answers:
+            keyList.append(i)
+    for j in encryptedStr:
+        if j in keyList:
+            newStr+=answers[j]
+        else:
+            newStr+="?"
+    return newStr
