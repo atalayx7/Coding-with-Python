@@ -1,5 +1,8 @@
 import re
-
+'''
+Soru: On kıtadan oluşan İstiklal Marşı'nın tamamında bu kelimelerden hangisi daha az geçer?
+A) Vatan    B) Kan    C) Toprak    D) Yurt
+'''
 with open('istiklal.txt', encoding='utf-8') as x:
     firstList = []
     # x=x.readlines()
