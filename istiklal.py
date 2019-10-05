@@ -19,9 +19,9 @@ for i in range(len(firstList)):
         elif 'kan' in j:
             dictList2['kan'] += 1
 
-        if not j in dictList:
-            dictList[j] = 1
-        else:
-            dictList[j] += 1
+        #if not j in dictList:
+        #    dictList[j] = 1
+        #else:
+        #    dictList[j] += 1
 # print(dictList)
 print(dictList2)
