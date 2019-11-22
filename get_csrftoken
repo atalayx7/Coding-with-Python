@@ -1,0 +1,13 @@
+import requests
+import re
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+re_csrf = 'csrftoken=(.*?);'
+
+s = requests.session()
+r = s.get('<URL>', verify=False)
+
+csrf = re.findall(re_csrf, r.text)[0]
+
+print(csrf)
