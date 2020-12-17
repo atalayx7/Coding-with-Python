@@ -1,27 +1,3 @@
-"""
-import os
-import time
-for dirpath, dirs, files in os.walk("C:\\Users\\Atalay\\Desktop\\New folder"):
-	print(dirpath)
-	time.sleep(2)
-"""
-"""
-
-for birim in birimler:
-	os.access('/path/to/folder', os.W_OK)
-
-print(len(birimler))
-"""
-
-
-"""
-
-with open ("letsdo.txt",'r') as f:
-	f=f.readlines()
-
-	for i in f:
-		print()
-"""
 import string
 import re
 import os
@@ -47,20 +23,14 @@ def isWritable(directory):
 #directory = "C:\\Users\\Atalay\\Desktop\\New folder\\New folder (4)\\New folder (2)"
 
 with open("something.txt","w") as nothing:
-	for dirpath, dirs, files in os.walk("C:\\Users\\Atalay\\Desktop\\New folder"):
+	for dirpath, dirs, files in os.walk("C:\\Users\\aergen\\Desktop\\Yeni klasör (2)"):
 		x=dirpath.replace('\\','\\\\')
+		if "olmamalı" in x:
+                    continue
 		#print(x)
-		if (isWritable(x)):
+		elif (isWritable(x)):
 			print("ACCESSIBLE!!!")
 			print(x)
 			print(len(x)*'-')
 			nothing.writelines(x+'\n')
 		#time.sleep(2)
-
-	#elif not isWritable(x):
-		#continue
-	#	print(x,"NOT ACCESSIBLE")
-	#if isWritable(x):
-	#	print(x,"NOT ACCESSIBLE")
-
-#isWritable("C:\\Users\\Atalay\\Desktop\\New folder\\New folder (4)\\New folder")
