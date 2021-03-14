@@ -1,0 +1,20 @@
+"""
+USOM (TR-CERT) publishes a list of malicious links in order to be detected and removed cyber threats by evaluating national and international cyber incident reports.
+
+This code block is used to synchronize your malicious links list on your local repository.
+"""
+import requests
+from requests.exceptions import HTTPError
+
+usom_url = 'https://www.usom.gov.tr/url-list.txt'
+
+try:
+	request = requests.get(usom_url, headers = {'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0'})
+	with open(r'malicious-list.csv', 'wb') as f:
+		f.write(request.content)
+except Exception as e:
+	print(f'Other error occurred: {err}')
+except HTTPError as http_err:
+        print(f'HTTP error occurred: {http_err}')   
+else:
+	print("Successfully SYNCED")
